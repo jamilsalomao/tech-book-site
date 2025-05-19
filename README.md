@@ -6,8 +6,9 @@ Site estático para exibição de livros técnicos e influenciadores da área Te
 
 ## 📸 Captura de Tela
 
-![preview](./screenshot.png)  
-<sub>*Adicione sua captura de tela na raiz do projeto como `screenshot.png` ou edite o caminho acima.*</sub>
+![preview](./public/Inicial.png)
+![preview](./public/SectionBooks.png)
+![preview](./public/SectionInflu.png) 
 
 ---
 
