@@ -1,6 +1,6 @@
 # 📚 Tech Book Site
 
-Site estático para exibição de livros técnicos, feito com Vite, Tailwind CSS e JavaScript. Rápido, moderno e totalmente responsivo, o projeto serve como uma base para uma biblioteca online de livros de tecnologia.
+Site estático para exibição de livros técnicos e influenciadores da área Tech, feito com Vite, Tailwind CSS e JavaScript. Rápido, moderno e totalmente responsivo, o projeto serve como uma base para uma biblioteca online de livros de tecnologia e pesquisa de influenciadores que possam te ajudar em seus estudos e aprendizado.
 
 ---
 
@@ -75,11 +75,16 @@ Os arquivos otimizados estarão na pasta `/dist`.
 
 ## ✅ Melhorias Futuras
 
-- [ ] Adicionar sistema de busca de livros
-- [ ] Categoria e filtros por linguagem/tecnologia
-- [ ] Página de detalhes para cada livro
-- [ ] Integração com banco de dados ou API externa
-- [ ] Design dark/light mode
+- [ ] Adicionar sistema de paginação para exibir livros em múltiplas páginas
+- [ ] Adicionar sistema de busca por título/autor
+- [ ] Página de detalhes completa para cada livro (além do modal)
+- [ ] Integração com banco de dados ou API externa para livros dinâmicos
+- [ ] Sistema de avaliação ou comentários por livro
+- [ ] Melhor responsividade em dispositivos móveis
+- [ ] Página inicial com destaques ou recomendações
+- [ ] Implementar envio de e-mails com novidades para usuários cadastrados
+- [ ] Parcerias com marcas para divulgação no site
+- [ ] Criar uma seção de novidades sobre a área tech
 
 ---
 
