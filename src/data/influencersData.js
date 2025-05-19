@@ -107,7 +107,7 @@ document.addEventListener("DOMContentLoaded", () => {
             </div>
             <div class="ml-4">
               <h3 class="text-lg font-bold text-gray-900 dark:text-white">${influencer.name}</h3>
-              <p class="text-sm text-purple-600 dark:text-purple-400">${influencer.role}</p>
+              <p class="text-sm text-purple-600 dark:text-purple-400">${influencer.role || ""}</p>
             </div>
           </div>
           <div class="mt-4">

@@ -74,7 +74,6 @@ const influencers = [
       { name: "YouTube", url: "https://www.youtube.com/c/FilipeDeschamps" },
       { name: "Twitter", url: "https://twitter.com/filipedeschamps" },
       { name: "GitHub", url: "https://github.com/filipedeschamps" },
-      { name: "Instagram", url: ""},
     ],
     topics: ["JavaScript", "Carreira", "Tecnologia"],
   },
