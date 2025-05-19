@@ -1,5 +1,6 @@
 // vite.config.js
 import { defineConfig } from 'vite';
+import tailwindcss from '@tailwindcss/vite'
 
 export default defineConfig({
   root: '.',               // Define a raiz do projeto (onde está o index.html)
@@ -10,4 +11,7 @@ export default defineConfig({
     port: 5173,            // Porta local (padrão do Vite)
     open: true,            // Abre no navegador automaticamente
   },
+  plugins: [    
+    tailwindcss(),  
+  ],
 });
