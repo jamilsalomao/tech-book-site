@@ -98,8 +98,8 @@ Sinta-se à vontade para abrir uma **issue** ou enviar um **pull request** com s
 
 ## 📬 Contato
 
-Feito com 💻 por [Jamil Salomão](https://github.com/jamilsalomao)  
-Entre em contato via GitHub ou crie uma issue para dúvidas e sugestões!
+Feito por [Jamil Salomão](https://github.com/jamilsalomao)  
+Entre em contato via GitHub ou pelas minhas redes sociais, ou então crie uma issue para dúvidas e sugestões!
 
 ---
 
