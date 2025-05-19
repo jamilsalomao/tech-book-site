@@ -1,4 +1,4 @@
-
+import { books } from "./statsdata"
 // Books section functionality
 document.addEventListener("DOMContentLoaded", () => {
   const booksGrid = document.getElementById("books-grid")

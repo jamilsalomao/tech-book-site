@@ -1,5 +1,5 @@
 // Data for books and influencers
-const books = [
+export const books = [
   {
     id: 1,
     title: "Algoritmos E Lógica Da Programação",
@@ -63,7 +63,7 @@ const books = [
   
 ]
 
-const influencers = [
+export const influencers = [
   {
     id: 1,
     name: "Filipe Deschamps",

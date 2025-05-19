@@ -1,4 +1,4 @@
-
+import { influencers } from "./statsdata"
 // Influencers section functionality
 document.addEventListener("DOMContentLoaded", () => {
   const influencersGrid = document.getElementById("influencers-grid")
