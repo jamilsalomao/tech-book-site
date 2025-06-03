@@ -1,4 +1,3 @@
-// Data for books and influencers
 export const books = [
   {
     id: 1,
