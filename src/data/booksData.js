@@ -6,9 +6,18 @@ document.addEventListener("DOMContentLoaded", () => {
   const bookModal = document.getElementById("book-modal")
   const bookModalContent = document.getElementById("book-modal-content")
   const closeBookModal = document.getElementById("close-book-modal")
+  const paginationControls = document.createElement('div'); // Novo elemento para os controles de paginação
+  paginationControls.id = 'pagination-controls';
+  paginationControls.className = 'flex justify-center items-center mt-8 space-x-2';
+  booksGrid.parentNode.appendChild(paginationControls); // Adiciona os controles logo abaixo do grid de livros
 
   let filteredBooks = [...books]
   let selectedCategory = "Todos"
+
+  // --- Variáveis para Paginação ---
+  const booksPerPage = 6 // Define quantos livros por página você quer exibir
+  let currentPage = 1 // Começa na primeira página
+  // -------------------------------
 
   // Get unique categories
   const categories = ["Todos", ...new Set(books.flatMap((book) => book.category))]
@@ -29,6 +38,7 @@ document.addEventListener("DOMContentLoaded", () => {
   // Filter books by category
   function filterBooksByCategory(category) {
     selectedCategory = category
+    currentPage = 1 // Reseta para a primeira página ao mudar de categoria
 
     // Update button styles
     const buttons = bookCategories.querySelectorAll("button")
@@ -70,10 +80,20 @@ document.addEventListener("DOMContentLoaded", () => {
   function renderBooks() {
     booksGrid.innerHTML = ""
 
-    filteredBooks.forEach((book) => {
+    // --- Lógica de Paginação na renderização ---
+    const startIndex = (currentPage - 1) * booksPerPage
+    const endIndex = startIndex + booksPerPage
+    const booksToDisplay = filteredBooks.slice(startIndex, endIndex)
+    // -------------------------------------------
+
+    if (booksToDisplay.length === 0) {
+      booksGrid.innerHTML = `<p class="col-span-full text-center text-gray-500 dark:text-gray-400">Nenhum livro encontrado nesta categoria.</p>`;
+    }
+
+    booksToDisplay.forEach((book) => {
       const bookCard = document.createElement("div")
       bookCard.className =
-        "group relative bg-white dark:bg-gray-800 rounded-lg shadow-lg overflow-hidden transform transition-all duration-300 hover:scale-105 hover:shadow-xl"
+        "group relative bg-white dark:bg-gray-800 rounded-lg shadow-lg overflow-hidden transform transition-all duration-300 hover:scale-105 hover:shadow-xl animate-fadeIn" // Adicionei animate-fadeIn aqui
 
       bookCard.innerHTML = `
         <div class="relative h-80 bg-gray-200 dark:bg-gray-700 overflow-hidden">
@@ -117,7 +137,74 @@ document.addEventListener("DOMContentLoaded", () => {
         showBookDetails(bookId)
       })
     })
+
+    renderPaginationControls() // Renderiza os controles de paginação após renderizar os livros
   }
+
+  // --- Funções de Paginação ---
+  function renderPaginationControls() {
+    paginationControls.innerHTML = ''; // Limpa os controles existentes
+
+    const totalPages = Math.ceil(filteredBooks.length / booksPerPage);
+
+    if (totalPages <= 1) {
+      return; // Não mostra paginação se houver apenas uma página ou menos
+    }
+
+    // Botão Anterior
+    const prevButton = document.createElement('button');
+    prevButton.className = `px-4 py-2 rounded-md font-medium transition-colors ${
+      currentPage === 1
+        ? 'bg-gray-100 dark:bg-gray-700 text-gray-400 cursor-not-allowed'
+        : 'bg-purple-600 text-white hover:bg-purple-700'
+    }`;
+    prevButton.textContent = 'Anterior';
+    prevButton.disabled = currentPage === 1;
+    prevButton.addEventListener('click', () => {
+      if (currentPage > 1) {
+        currentPage--;
+        renderBooks();
+        window.scrollTo({ top: document.getElementById('books').offsetTop - 80, behavior: 'smooth' }); // Volta para o topo da seção de livros
+      }
+    });
+    paginationControls.appendChild(prevButton);
+
+    // Números das páginas
+    for (let i = 1; i <= totalPages; i++) {
+      const pageButton = document.createElement('button');
+      pageButton.className = `px-4 py-2 rounded-md font-medium transition-colors ${
+        i === currentPage
+          ? 'bg-purple-600 text-white'
+          : 'bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-gray-200 hover:bg-gray-300 dark:hover:bg-gray-600'
+      }`;
+      pageButton.textContent = i;
+      pageButton.addEventListener('click', () => {
+        currentPage = i;
+        renderBooks();
+        window.scrollTo({ top: document.getElementById('books').offsetTop - 80, behavior: 'smooth' }); // Volta para o topo da seção de livros
+      });
+      paginationControls.appendChild(pageButton);
+    }
+
+    // Botão Próximo
+    const nextButton = document.createElement('button');
+    nextButton.className = `px-4 py-2 rounded-md font-medium transition-colors ${
+      currentPage === totalPages
+        ? 'bg-gray-100 dark:bg-gray-700 text-gray-400 cursor-not-allowed'
+        : 'bg-purple-600 text-white hover:bg-purple-700'
+    }`;
+    nextButton.textContent = 'Próximo';
+    nextButton.disabled = currentPage === totalPages;
+    nextButton.addEventListener('click', () => {
+      if (currentPage < totalPages) {
+        currentPage++;
+        renderBooks();
+        window.scrollTo({ top: document.getElementById('books').offsetTop - 80, behavior: 'smooth' }); // Volta para o topo da seção de livros
+      }
+    });
+    paginationControls.appendChild(nextButton);
+  }
+  // -------------------------------
 
   // Show book details in modal
   function showBookDetails(bookId) {

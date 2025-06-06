@@ -3,9 +3,18 @@ import { influencers } from "./statsdata"
 document.addEventListener("DOMContentLoaded", () => {
   const influencersGrid = document.getElementById("influencers-grid")
   const influencerTopics = document.getElementById("influencer-topics")
+  const paginationControlsInfluencers = document.createElement('div'); // Novo elemento para os controles de paginação dos influenciadores
+  paginationControlsInfluencers.id = 'pagination-controls-influencers';
+  paginationControlsInfluencers.className = 'flex justify-center items-center mt-8 space-x-2';
+  influencersGrid.parentNode.appendChild(paginationControlsInfluencers); // Adiciona os controles logo abaixo do grid de influenciadores
 
   let filteredInfluencers = [...influencers]
   let selectedTopic = "Todos"
+
+  // --- Variáveis para Paginação dos Influenciadores ---
+  const influencersPerPage = 6 // Define quantos influenciadores por página você quer exibir
+  let currentInfluencerPage = 1 // Começa na primeira página
+  // ----------------------------------------------------
 
   // Get unique topics
   const topics = ["Todos", ...new Set(influencers.flatMap((influencer) => influencer.topics))]
@@ -26,6 +35,7 @@ document.addEventListener("DOMContentLoaded", () => {
   // Filter influencers by topic
   function filterInfluencersByTopic(topic) {
     selectedTopic = topic
+    currentInfluencerPage = 1 // Reseta para a primeira página ao mudar de tópico
 
     // Update button styles
     const buttons = influencerTopics.querySelectorAll("button")
@@ -67,10 +77,20 @@ document.addEventListener("DOMContentLoaded", () => {
   function renderInfluencers() {
     influencersGrid.innerHTML = ""
 
-    filteredInfluencers.forEach((influencer) => {
+    // --- Lógica de Paginação na renderização ---
+    const startIndex = (currentInfluencerPage - 1) * influencersPerPage
+    const endIndex = startIndex + influencersPerPage
+    const influencersToDisplay = filteredInfluencers.slice(startIndex, endIndex)
+    // -------------------------------------------
+
+    if (influencersToDisplay.length === 0) {
+      influencersGrid.innerHTML = `<p class="col-span-full text-center text-gray-500 dark:text-gray-400">Nenhum influenciador encontrado nesta categoria.</p>`;
+    }
+
+    influencersToDisplay.forEach((influencer) => {
       const influencerCard = document.createElement("div")
       influencerCard.className =
-        "bg-white dark:bg-gray-900 rounded-lg shadow-lg overflow-hidden transform transition-all duration-300 hover:shadow-xl hover:translate-y-[-5px]"
+        "bg-white dark:bg-gray-900 rounded-lg shadow-lg overflow-hidden transform transition-all duration-300 hover:shadow-xl hover:translate-y-[-5px] animate-fadeIn" // Adicionei animate-fadeIn aqui
 
       let platformsHTML = ""
       influencer.platforms.forEach((platform) => {
@@ -124,7 +144,74 @@ document.addEventListener("DOMContentLoaded", () => {
 
       influencersGrid.appendChild(influencerCard)
     })
+
+    renderInfluencerPaginationControls() // Renderiza os controles de paginação após renderizar os influenciadores
   }
+
+  // --- Funções de Paginação para Influenciadores ---
+  function renderInfluencerPaginationControls() {
+    paginationControlsInfluencers.innerHTML = ''; // Limpa os controles existentes
+
+    const totalPages = Math.ceil(filteredInfluencers.length / influencersPerPage);
+
+    if (totalPages <= 1) {
+      return; // Não mostra paginação se houver apenas uma página ou menos
+    }
+
+    // Botão Anterior
+    const prevButton = document.createElement('button');
+    prevButton.className = `px-4 py-2 rounded-md font-medium transition-colors ${
+      currentInfluencerPage === 1
+        ? 'bg-gray-100 dark:bg-gray-700 text-gray-400 cursor-not-allowed'
+        : 'bg-purple-600 text-white hover:bg-purple-700'
+    }`;
+    prevButton.textContent = 'Anterior';
+    prevButton.disabled = currentInfluencerPage === 1;
+    prevButton.addEventListener('click', () => {
+      if (currentInfluencerPage > 1) {
+        currentInfluencerPage--;
+        renderInfluencers();
+        window.scrollTo({ top: document.getElementById('influencers').offsetTop - 80, behavior: 'smooth' }); // Volta para o topo da seção
+      }
+    });
+    paginationControlsInfluencers.appendChild(prevButton);
+
+    // Números das páginas
+    for (let i = 1; i <= totalPages; i++) {
+      const pageButton = document.createElement('button');
+      pageButton.className = `px-4 py-2 rounded-md font-medium transition-colors ${
+        i === currentInfluencerPage
+          ? 'bg-purple-600 text-white'
+          : 'bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-gray-200 hover:bg-gray-300 dark:hover:bg-gray-600'
+      }`;
+      pageButton.textContent = i;
+      pageButton.addEventListener('click', () => {
+        currentInfluencerPage = i;
+        renderInfluencers();
+        window.scrollTo({ top: document.getElementById('influencers').offsetTop - 80, behavior: 'smooth' }); // Volta para o topo da seção
+      });
+      paginationControlsInfluencers.appendChild(pageButton);
+    }
+
+    // Botão Próximo
+    const nextButton = document.createElement('button');
+    nextButton.className = `px-4 py-2 rounded-md font-medium transition-colors ${
+      currentInfluencerPage === totalPages
+        ? 'bg-gray-100 dark:bg-gray-700 text-gray-400 cursor-not-allowed'
+        : 'bg-purple-600 text-white hover:bg-purple-700'
+    }`;
+    nextButton.textContent = 'Próximo';
+    nextButton.disabled = currentInfluencerPage === totalPages;
+    nextButton.addEventListener('click', () => {
+      if (currentInfluencerPage < totalPages) {
+        currentInfluencerPage++;
+        renderInfluencers();
+        window.scrollTo({ top: document.getElementById('influencers').offsetTop - 80, behavior: 'smooth' }); // Volta para o topo da seção
+      }
+    });
+    paginationControlsInfluencers.appendChild(nextButton);
+  }
+  // ----------------------------------------------------
 
   // Initial render
   renderInfluencers()
