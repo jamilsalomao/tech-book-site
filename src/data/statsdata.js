@@ -3,7 +3,7 @@ export const books = [
     id: 1,
     title: "Entendendo Algoritmos: Um guia ilustrado para programadores e outros curiosos",
     author: "Aditya Y. Bhargava",
-    cover: "/src/images/Books/EntendendoAlgoritmos.jpg",
+    cover: "/public/Books/EntendendoAlgoritmos.jpg",
     description: "Este guia cativante e ilustrado desmistifica o aprendizado de algoritmos, abordando de forma simples tópicos como pesquisa, ordenação e compressão de dados. Com diagramas e exemplos em Python, é perfeito para quem busca aplicar algoritmos em problemas de programação do dia a dia.",
     category: ["Algoritmos", "Estrutura de Dados", "Programação", "Python", "Fundamentos"],
     link: "https://www.amazon.com.br/Entendendo-Algoritmos-Aditya-Y-Bhargava/dp/8575225634/",
@@ -12,7 +12,7 @@ export const books = [
     id: 2,
     title: "Algoritmos E Lógica Da Programação",
     author: "Marco A. Furlan de Souza, Marcelo Marques Gomes, Marcio Vieira Soares & Ricardo Concilio",
-    cover: "/src/images/Books/AlgoritmosLogicaDeProgramação.jpg",
+    cover: "/public/Books/AlgoritmosLogicaDeProgramação.jpg",
     description: "Com linguagem simples e didática, este livro procura tornar prática a lógica de programação, além de mostrar aos estudantes um caminho mais adequado na construção dos algoritmos. O desenvolvimento do raciocínio lógico e da abstração de procedimentos e dados são as maiores dificuldades para os estudantes dos cursos introdutórios.",
     category: ["Lógica de Programação", "Algoritmos", "Programação", "Fundamentos", "Iniciantes"],
     link: "https://www.amazon.com.br/Algoritmos-L%C3%B3gica-Programa%C3%A7%C3%A3o-Souza-Marcelo/dp/8522128146/",
@@ -21,7 +21,7 @@ export const books = [
     id: 3,
     title: "Inteligência artificial a nosso favor: Como manter o controle sobre a tecnologia",
     author: "Toby Walsh",
-    cover: "/src/images/Books/InteligenciaArtificial.jpg",
+    cover: "/public/Books/InteligenciaArtificial.jpg",
     description: "Uma análise acessível e perspicaz sobre a Inteligência Artificial, explorando seu potencial e os desafios éticos e sociais que ela apresenta. Essencial para entender o impacto da IA em nosso futuro e como garantir que ela seja usada de forma responsável.",
     category: ["Inteligência Artificial", "IA", "Tecnologia"],
     link: "https://www.amazon.com.br/dp/6559213080/",
@@ -30,7 +30,7 @@ export const books = [
     id: 4,
     title: "Aprendendo TypeScript: Melhore suas habilidades de desenvolvimento web usando JavaScript Type-Safe",
     author: "Josh Goldberg",
-    cover: "/src/images/Books/AprendendoTypeScript.jpg",
+    cover: "/public/Books/AprendendoTypeScript.jpg",
     description: "Um guia prático para aprender TypeScript, aprimorando suas habilidades de desenvolvimento web com código mais seguro e robusto. Ideal para quem já conhece JavaScript e quer adicionar tipagem estática aos seus projetos.",
     category: ["TypeScript", "JavaScript", "Desenvolvimento Web", "Front-end", "Linguagens de Programação"],
     link: "https://www.amazon.com.br/dp/658605799X/",
@@ -39,7 +39,7 @@ export const books = [
     id: 5,
     title: "JavaScript: O Guia Definitivo",
     author: "David Flanagan",
-    cover: "/src/images/Books/JavaScriptoGuiaDefinitivo.jpg",
+    cover: "/public/Books/JavaScriptoGuiaDefinitivo.jpg",
     description:"A referência completa e atualizada para a linguagem JavaScript, cobrindo ECMAScript e as APIs JavaScript do lado do cliente. Um recurso indispensável para programadores experientes que desejam aprofundar seus conhecimentos e dominar a linguagem da web em todos os seus detalhes.",        
     category: ["JavaScript", "Programação", "Desenvolvimento Web", "Front-end"],
     link: "https://www.amazon.com.br/dp/856583719X/?coliid=I1NL700F653EXJ&colid=1H72H60B8MQ3J&psc=1&ref_=list_c_wl_lv_ov_lig_dp_it",
@@ -48,7 +48,7 @@ export const books = [
     id: 6,
     title: "Arquitetura Limpa: o Guia do Artesão Para Estrutura e Design de Software",
     author: " Robert C. Martin",
-    cover: "/src/images/Books/ArquiteturaLimpa.jpg",
+    cover: "/public/Books/ArquiteturaLimpa.jpg",
     description:"Robert C. Martin ('Uncle Bob') revela as regras universais para construir arquiteturas de software robustas, testáveis e fáceis de manter. Essencial para entender como projetar sistemas que resistem ao tempo e às mudanças, garantindo a produtividade do desenvolvimento.",   
     category: ["Arquitetura de Software", "Design de Software", "Engenharia de Software", "Princípios SOLID", "Software"],
     link: "https://www.amazon.com.br/Arquitetura-Limpa-Artes%C3%A3o-Estrutura-Software/dp/8550804606/ref=sr_1_11?__mk_pt_BR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=96XX2O1QKXQ8&dib=eyJ2IjoiMSJ9.Ad1frumtVmlr3KANt0_r2albrMVG_PwU-C_M_yIySi26XUoQRVJjrfuhBL6imDcbWoe9RFu6-AqwuoOoqhZfdrwcqC7O3ghe05S6u6QupZoH1bb-_d_BgtgjYgCS_GjUYjibY-8jlbCor5vW3J7KbJUYVfAnLP0nO_sDWInUp7INgZDggebFIN4mJA7CWNWL_e9aehHwPT-azconyz4qsZT0voaL2QNpKYHp01mCMiywFON_A8K61aQMhEoLp3xY87NTz3FBQ6rQCx79nQ_e-lBK_0BTqziHLi4QwF4INrw.r13zs56bs6Iingc89F_r7Pw1s_XYY7CFONdD3NXB4AU&dib_tag=se&keywords=livros+tecnologia&qid=1747323533&sprefix=livros+tecnologia%2Caps%2C204&sr=8-11&ufe=app_do%3Aamzn1.fos.6d798eae-cadf-45de-946a-f477d47705b9",
@@ -57,7 +57,7 @@ export const books = [
     id: 7,
     title: "Código Limpo: Habilidades Essenciais do Agile Software",
     author: "Robert C. Martin",
-    cover: "/src/images/Books/CodigoLimpo.jpg",
+    cover: "/public/Books/CodigoLimpo.jpg",
     description:"Considerado um divisor de águas na programação, este livro ensina a arte de escrever código que é fácil de ler, entender e manter. 'Uncle Bob' detalha as boas práticas para criar software de alta qualidade, com foco em nomes significativos, funções e classes limpas e manuseio de erros.",    
     category: ["Clean Code", "Boas Práticas", "Engenharia de Software", "Qualidade de Código", "Agile"],
     link: "https://www.amazon.com.br/C%C3%B3digo-limpo-Robert-C-Martin/dp/8576082675",
@@ -66,7 +66,7 @@ export const books = [
     id: 8,
     title: "React Fluente: Crie aplicações web rápidas, eficazes e intuitivas",
     author: "Carlos Gomes",
-    cover: "/src/images/Books/ReactFluente.jpg",
+    cover: "/public/Books/ReactFluente.jpg",
     description: "Um guia completo para construir interfaces de usuário modernas e performáticas com React. Aborda desde os fundamentos até técnicas avançadas, incluindo hooks, roteamento e gerenciamento de estado, essencial para desenvolvedores front-end.",
     category: ["React", "JavaScript", "Front-end", "Desenvolvimento Web", "Frameworks"],
     link: "https://www.amazon.com.br/dp/8575229095/",
@@ -75,7 +75,7 @@ export const books = [
     id: 9,
     title: "Introdução à Inteligência Artificial. Uma Abordagem não Técnica",
     author: "Tom Taulli",
-    cover: "src/images/Books/IntroduçaoInteligenciaArtificial.jpg",
+    cover: "public/Books/IntroduçaoInteligenciaArtificial.jpg",
     description: "Um guia acessível e não técnico sobre Inteligência Artificial, cobrindo Machine Learning, Deep Learning, Processamento de Linguagem Natural e Robótica. Explora o impacto da IA em diversos setores e suas implicações sociais e éticas, essencial para compreender o presente e futuro da tecnologia.",
     category: ["Inteligência Artificial", "IA", "Machine Learning", "Não Técnico", "Tecnologia"],
     link: "https://www.amazon.com.br/dp/8575228196/",
@@ -84,7 +84,7 @@ export const books = [
     id: 10,
     title: "Fundamentos de Html5 e Css3",
     author: "Mauricio Samy Silva",
-    cover: "/src/images/Books/FundamentosHTMLeCSS.jpg",
+    cover: "/public/Books/FundamentosHTMLeCSS.jpg",
     description: "Um guia abrangente para dominar as tecnologias essenciais da web: HTML5 e CSS3. Ideal para iniciantes e para quem deseja aprimorar seus conhecimentos em desenvolvimento front-end, com exemplos práticos e atualizados.",
     category: ["HTML5", "CSS3", "Desenvolvimento Web", "Front-end"],
     link: "https://www.amazon.com.br/dp/8575224387/",
@@ -93,7 +93,7 @@ export const books = [
     id: 11,
     title: "Introdução à Programação com Python – 4ª Edição: Algoritmos e lógica de programação para iniciantes",
     author: "Nilo Ney Coutinho Menezes",
-    cover: "/src/images/Books/IntroduçaoaPython.jpg",
+    cover: "/public/Books/IntroduçaoaPython.jpg",
     description: "Um livro didático e completo para quem está começando a programar, utilizando a linguagem Python. Aborda desde os conceitos básicos de algoritmos e lógica de programação até estruturas de dados e programação orientada a objetos.",
     category: ["Python", "Programação", "Algoritmos", "Lógica de Programação"],
     link: "https://www.amazon.com.br/dp/8575228862/",
@@ -102,7 +102,7 @@ export const books = [
     id: 12,
     title: "Estruturas De Dados E Algoritmos Com Javascript - 2ª Edição",
     author: "Loiane Groner",
-    cover: "/src/images/Books/EstruturadeDadoseAlgoritmos.jpg",
+    cover: "/public/Books/EstruturadeDadoseAlgoritmos.jpg",
     description: "Um guia prático para aprender estruturas de dados e algoritmos utilizando JavaScript. Essencial para desenvolvedores que buscam otimizar o desempenho de suas aplicações web e mobile.",
     category: ["Estruturas de Dados", "Algoritmos", "JavaScript", "Desenvolvimento Web", "Front-end"],
     link: "https://www.amazon.com.br/dp/8575226932/",
@@ -111,7 +111,7 @@ export const books = [
     id: 13,
     title: "Lógica de Programação e Algoritmos com Javascript",
     author: "Edécio Fernando Iepsen",
-    cover: "/src/images/Books/LogicadeProgramaçaoeAlgoritmos.jpg",
+    cover: "/public/Books/LogicadeProgramaçaoeAlgoritmos.jpg",
     description: "Um livro conciso e direto ao ponto para aprender lógica de programação e algoritmos utilizando a linguagem JavaScript. Ideal para iniciantes que querem dar os primeiros passos no mundo da programação web.",
     category: ["Lógica de Programação", "Algoritmos", "JavaScript", "Desenvolvimento Web"],
     link: "https://www.amazon.com.br/dp/8575226568/",
@@ -120,7 +120,7 @@ export const books = [
     id: 14,
     title: "Javascript e Jquery: Desenvolvimento de Interfaces web Interativas",
     author: "Jon Duckett",
-    cover: "/src/images/Books/JavaScript&Jquery.jpg",
+    cover: "/public/Books/JavaScript&Jquery.jpg",
     description: "Um guia visualmente rico e prático para aprender JavaScript e jQuery, criando interfaces web interativas e dinâmicas. Ideal para quem busca um aprendizado visual e exemplos claros.",
     category: ["JavaScript", "jQuery", "Desenvolvimento Web", "Front-end", "Design de Interface"],
     link: "https://www.amazon.com.br/dp/8576089459/",
@@ -129,7 +129,7 @@ export const books = [
     id: 15,
     title: "Como Ser Um Programador Melhor",
     author: "Pete Goodliffe",
-    cover: "/src/images/Books/ComoSerUmProgramadorMelhor.jpg",
+    cover: "/public/Books/ComoSerUmProgramadorMelhor.jpg",
     description: "Um guia abrangente para aprimorar suas habilidades como programador, abordando desde técnicas de codificação e design até aspectos de carreira e trabalho em equipe. Essencial para quem busca se destacar na área.",
     category: ["Carreira", "Boas Práticas", "Desenvolvimento de Software", "Habilidades Profissionais", "Programação"],
     link: "https://www.amazon.com.br/dp/8575224158/",
@@ -142,7 +142,7 @@ export const influencers = [
     {
       id: 1,
       name: "Rafaella Ballerini",
-      avatar: "/src/images/Influencers/RafaellaBallerini.jpeg",
+      avatar: "/public/Influencers/RafaellaBallerini.jpeg",
       role: "Desenvolvedora e Instrutora",
       bio: "Compartilha conteúdo sobre desenvolvimento web, lógica de programação e dicas para iniciantes na área de TI.",
       platforms: [
@@ -155,7 +155,7 @@ export const influencers = [
         {
       id: 2,
       name: "Rocketseat",
-      avatar: "/src/images/Influencers/Rocketseat.jpeg",
+      avatar: "/public/Influencers/Rocketseat.jpeg",
       role: "Plataforma de Educação",
       bio: "Plataforma de educação em tecnologia que ajuda pessoas a se tornarem desenvolvedores de software.",
       platforms: [
@@ -168,7 +168,7 @@ export const influencers = [
   {
     id: 3,
     name: "Filipe Deschamps",
-    avatar: "/src/images/Influencers/FilipeDeschamps.png",
+    avatar: "/public/Influencers/FilipeDeschamps.png",
     role: "Desenvolvedor e Youtuber",
     bio: "Compartilha conteúdo sobre programação, tecnologia e empreendedorismo de forma acessível e divertida.",
     platforms: [
@@ -181,7 +181,7 @@ export const influencers = [
     {
       id: 4,
       name: "Fernanda Kipper",
-      avatar: "/src/images/Influencers/FernandaKipper.jpeg",
+      avatar: "/public/Influencers/FernandaKipper.jpeg",
       role: "Desenvolvedora e Criadora de Conteúdo",
       bio: "Focada em desenvolvimento front-end, acessibilidade, UI/UX e carreira em tecnologia.",
       platforms: [
@@ -195,7 +195,7 @@ export const influencers = [
     {
         id: 5,
         name: "Alura",
-        avatar: "/src/images/Influencers/Alura.jpeg",
+        avatar: "/public/Influencers/Alura.jpeg",
         role: "Plataforma de Educação em Tecnologia",
         bio: "Oferece cursos online em diversas áreas da tecnologia, com foco em desenvolvimento de software, dados, design e mais.",
         platforms: [
@@ -208,7 +208,7 @@ export const influencers = [
 {
         id: 6, 
         name: "Diego Fernandes",
-        avatar: "/src/images/Influencers/DiegoFernandes.png", 
+        avatar: "/public/Influencers/DiegoFernandes.png", 
         role: "Cofundador e CTO da Rocketseat",
         bio: "Líder técnico e educador, compartilha insights sobre as últimas tecnologias web e mobile, arquitetura de software e a construção de produtos digitais na Rocketseat. Influenciador chave na comunidade de desenvolvimento.",
         platforms: [
@@ -222,7 +222,7 @@ export const influencers = [
     {
       id: 7,
       name: "Lucas Montano",
-      avatar: "/src/images/Influencers/LucasMontano.png",
+      avatar: "/public/Influencers/LucasMontano.png",
       role: "Desenvolvedor Mobile",
       bio: "Especialista em desenvolvimento mobile e empreendedorismo. Compartilha dicas sobre carreira em tecnologia.",
       platforms: [
@@ -235,7 +235,7 @@ export const influencers = [
     {
         id: 8,
         name: "DevMedia",
-        avatar: "/src/images/Influencers/DevMedia.png",
+        avatar: "/public/Influencers/DevMedia.png",
         role: "Plataforma de Conteúdo e Educação",
         bio: "Portal com artigos, tutoriais e cursos sobre diversas tecnologias e linguagens de programação.",
         platforms: [
@@ -247,7 +247,7 @@ export const influencers = [
     {
         id: 9,
         name: "Mario Souto (DevSoutinho)",
-        avatar: "/src/images/Influencers/MarioSouto.png",
+        avatar: "/public/Influencers/MarioSouto.png",
         role: "Desenvolvedor e Criador de Conteúdo",
         bio: "Foca em JavaScript, React, Next.js e carreira de desenvolvedor, com um estilo divertido e didático.",
         platforms: [
@@ -260,7 +260,7 @@ export const influencers = [
     {
         id: 10,
         name: "Akita On Rails (Podcast)",
-        avatar: "/src/images/Influencers/AkitaRails.jpeg", 
+        avatar: "/public/Influencers/AkitaRails.jpeg", 
         role: "Podcast de Tecnologia",
         bio: "Podcast do Fábio Akita, onde ele aprofunda discussões sobre tecnologia, carreira, e o mercado de trabalho.",
         platforms: [
@@ -272,7 +272,7 @@ export const influencers = [
     {
         id: 11,
         name: "Código Fonte TV",
-        avatar:"/src/images/Influencers/CodigoFonteTv.jpeg",
+        avatar:"/public/Influencers/CodigoFonteTv.jpeg",
         role: "Youtubers e Desenvolvedores",
         bio: "Canal que aborda notícias, tutoriais e curiosidades do mundo da programação e tecnologia de forma divertida.",
         platforms: [
@@ -285,7 +285,7 @@ export const influencers = [
     {
         id: 12,
         name: "Programador BR",
-        avatar:"/src/images/Influencers/ProgramadorBR.jpeg",
+        avatar:"/public/Influencers/ProgramadorBR.jpeg",
         role: "Youtuber e Programador",
         bio: "Canal focado em dicas de programação, carreira, tecnologias de backend como Node.js e Python.",
         platforms: [
@@ -297,7 +297,7 @@ export const influencers = [
     {
         id: 13,
         name: "Digital Innovation One (DIO)",
-        avatar: "/src/images/Influencers/DIO.png",
+        avatar: "/public/Influencers/DIO.png",
         role: "Plataforma de Educação",
         bio: "Plataforma com foco em cursos e bootcamps gratuitos para impulsionar a carreira em tecnologia.",
         platforms: [
