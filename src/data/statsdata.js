@@ -146,7 +146,7 @@ export const influencers = [
       role: "Desenvolvedora e Instrutora",
       bio: "Compartilha conteúdo sobre desenvolvimento web, lógica de programação e dicas para iniciantes na área de TI.",
       platforms: [
-        { name: "YouTube", url: "https://www.youtube.com/@rafaballerini" },
+        { name: "YouTube", url: "https://www.youtube.com/@rafaellaballerini" },
         { name: "Instagram", url: "https://www.instagram.com/rafaballerini/" },
         { name: "GitHub", url: "https://github.com/rafaballerini" },
       ],
@@ -162,6 +162,7 @@ export const influencers = [
         { name: "YouTube", url: "https://www.youtube.com/c/RocketSeat" },
         { name: "Twitter", url: "https://twitter.com/rocketseat" },
         { name: "GitHub", url: "https://github.com/rocketseat" },
+        { name: "Instagram", url: "https://www.instagram.com/rocketseat/" },
       ],
       topics: ["React", "Node.js", "React Native"],
     },
@@ -175,6 +176,7 @@ export const influencers = [
       { name: "YouTube", url: "https://www.youtube.com/c/FilipeDeschamps" },
       { name: "Twitter", url: "https://twitter.com/filipedeschamps" },
       { name: "GitHub", url: "https://github.com/filipedeschamps" },
+      { name: "Instagram", url: "https://www.instagram.com/filipedeschamps/"},
     ],
     topics: ["JavaScript", "Carreira", "Tecnologia"],
     },
@@ -185,9 +187,9 @@ export const influencers = [
       role: "Desenvolvedora e Criadora de Conteúdo",
       bio: "Focada em desenvolvimento front-end, acessibilidade, UI/UX e carreira em tecnologia.",
       platforms: [
-        { name: "YouTube", url: "https://www.youtube.com/@fernandakipper" },
-        { name: "Twitter", url: "https://twitter.com/fernandakipper" },
-        { name: "LinkedIn", url: "https://www.linkedin.com/in/fernandakipper/" },
+        { name: "YouTube", url: "https://www.youtube.com/@kipperdev" },
+        { name: "Twitter", url: "https://x.com/kipperdev" },
+        { name: "Instagram", url: "https://www.instagram.com/kipper.dev/" },
         { name: "GitHub", url: "https://github.com/Fernanda-Kipper"},
     ],
     topics: ["Front-end", "Acessibilidade", "UI/UX", "Carreira", "Web Design"],
@@ -199,7 +201,7 @@ export const influencers = [
         role: "Plataforma de Educação em Tecnologia",
         bio: "Oferece cursos online em diversas áreas da tecnologia, com foco em desenvolvimento de software, dados, design e mais.",
         platforms: [
-            { name: "YouTube", url: "https://www.youtube.com/c/AluraCursosOnline" },
+            { name: "YouTube", url: "https://www.youtube.com/@alura" },
             { name: "Website", url: "https://www.alura.com.br/" },
             { name: "Instagram", url: "https://www.instagram.com/aluraonline/" },
         ],
@@ -214,8 +216,8 @@ export const influencers = [
         platforms: [
             { name: "YouTube", url: "https://www.youtube.com/c/RocketSeat" },
             { name: "GitHub", url: "https://github.com/diego3g" },
-            { name: "LinkedIn", url: "https://www.linkedin.com/in/diego3g/" },
-            { name: "Instagram", url: "https://www.instagram.com/diego3g/" },
+            { name: "Twitter", url: "https://x.com/dieegosf" },
+            { name: "Instagram", url: "https://www.instagram.com/dieegosf/" },
         ],
         topics: ["Node.js", "React", "React Native", "Next.js", "Educação", "Arquitetura", "Carreira", "Startup"],
     },
@@ -240,7 +242,8 @@ export const influencers = [
         bio: "Portal com artigos, tutoriais e cursos sobre diversas tecnologias e linguagens de programação.",
         platforms: [
             { name: "Website", url: "https://www.devmedia.com.br/" },
-            { name: "YouTube", url: "https://www.youtube.com/c/DevMedia" },
+            { name: "YouTube", url: "https://www.youtube.com/@devmedia.oficial" },
+            { name: "Instagram", url: "https://www.instagram.com/devmedia.com.br/"},
         ],
         topics: ["Programação", "Tutoriais", "Desenvolvimento Web", "Banco de Dados", "Artigos"],
     },
@@ -252,7 +255,7 @@ export const influencers = [
         bio: "Foca em JavaScript, React, Next.js e carreira de desenvolvedor, com um estilo divertido e didático.",
         platforms: [
             { name: "YouTube", url: "https://www.youtube.com/c/DevSoutinho" },
-            { name: "Twitter", url: "https://twitter.com/devsoutinho" },
+            { name: "Twitter", url: "https://x.com/omariosouto" },
             { name: "GitHub", url: "https://github.com/DevSoutinho" },
         ],
         topics: ["JavaScript", "React", "Next.js", "Front-end", "Carreira", "Programação"],
@@ -265,7 +268,7 @@ export const influencers = [
         bio: "Podcast do Fábio Akita, onde ele aprofunda discussões sobre tecnologia, carreira, e o mercado de trabalho.",
         platforms: [
             { name: "Spotify", url: "https://open.spotify.com/show/0wPZqH85w38X1m8T03L3B5" },
-            { name: "YouTube", url: "https://www.youtube.com/c/AkitaOnRails" },
+            { name: "YouTube", url: "https://www.youtube.com/@Akitando" },
         ],
         topics: ["Podcast", "Tecnologia", "Carreira", "Arquitetura", "Mercado de Trabalho"],
     },
@@ -278,7 +281,7 @@ export const influencers = [
         platforms: [
             { name: "YouTube", url: "https://www.youtube.com/user/codigofontetv" },
             { name: "Website", url: "https://www.codigofonte.com.br/" },
-            { name: "Twitter", url: "https://twitter.com/codigofontetv" },
+            { name: "Instagram", url: "https://www.instagram.com/codigofontetv/" },
         ],
         topics: ["Programação", "Notícias Tech", "Desenvolvimento Web", "Tutoriais"],
     },
@@ -290,20 +293,9 @@ export const influencers = [
         bio: "Canal focado em dicas de programação, carreira, tecnologias de backend como Node.js e Python.",
         platforms: [
             { name: "YouTube", url: "https://www.youtube.com/c/ProgramadorBR" },
-            { name: "Twitter", url: "https://twitter.com/programador_br" },
+            { name: "Website", url: "https://programadorbr.com/" },
+            { name: "Instagram", url: "https://www.instagram.com/progbr/" },
         ],
         topics: ["Node.js", "Python", "Back-end", "Carreira", "Programação"],
-    },
-    {
-        id: 13,
-        name: "Digital Innovation One (DIO)",
-        avatar: "/Influencers/DIO.png",
-        role: "Plataforma de Educação",
-        bio: "Plataforma com foco em cursos e bootcamps gratuitos para impulsionar a carreira em tecnologia.",
-        platforms: [
-            { name: "Website", url: "https://web.dio.me/" },
-            { name: "YouTube", url: "https://www.youtube.com/c/DigitalInnovationOne" },
-        ],
-        topics: ["Educação", "Programação", "Carreira", "Bootcamps", "Desenvolvimento"],
     },
   ]
