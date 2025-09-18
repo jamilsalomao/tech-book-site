@@ -38,3 +38,17 @@ document.addEventListener("DOMContentLoaded", () => {
   // Set current year in footer
   document.getElementById("current-year").textContent = new Date().getFullYear()
 })
+
+tailwind.config = {
+        darkMode: 'class',
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['Inter', 'sans-serif'],
+            },
+            animation: {
+              'bounce-slow': 'bounce 3s infinite',
+            }
+          }
+        }
+      }
