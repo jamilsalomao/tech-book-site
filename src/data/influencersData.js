@@ -24,7 +24,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const button = document.createElement("button")
     button.className = `px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 ${
       topic === "Todos"
-        ? "bg-purple-600 text-white"
+        ? "bg-green-600 text-white"
         : "bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-gray-200 hover:bg-gray-300 dark:hover:bg-gray-600"
     }`
     button.textContent = topic
@@ -41,7 +41,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const buttons = influencerTopics.querySelectorAll("button")
     buttons.forEach((button) => {
       if (button.textContent === topic) {
-        button.classList.add("bg-purple-600", "text-white")
+        button.classList.add("bg-green-600", "text-white")
         button.classList.remove(
           "bg-gray-200",
           "dark:bg-gray-700",
@@ -51,7 +51,7 @@ document.addEventListener("DOMContentLoaded", () => {
           "dark:hover:bg-gray-600",
         )
       } else {
-        button.classList.remove("bg-purple-600", "text-white")
+        button.classList.remove("bg-green-600", "text-white")
         button.classList.add(
           "bg-gray-200",
           "dark:bg-gray-700",
@@ -99,7 +99,7 @@ document.addEventListener("DOMContentLoaded", () => {
             href="${platform.url}"
             target="_blank"
             rel="noopener noreferrer"
-            class="inline-flex items-center px-3 py-1.5 text-xs font-medium rounded-md text-white bg-gradient-to-r from-purple-600 to-pink-500 hover:from-purple-700 hover:to-pink-600 transition-all duration-300"
+            class="inline-flex items-center px-3 py-1.5 text-xs font-medium rounded-md text-white bg-gradient-to-r from-green-600 to-green-500 hover:from-green-700 hover:to-green-600 transition-all duration-300"
           >
             ${platform.name}
           </a>
@@ -109,7 +109,7 @@ document.addEventListener("DOMContentLoaded", () => {
       let topicsHTML = ""
       influencer.topics.forEach((topic) => {
         topicsHTML += `
-          <span class="inline-block px-2 py-1 text-xs font-semibold rounded-full bg-purple-100 dark:bg-purple-900 text-purple-800 dark:text-purple-200">
+          <span class="inline-block px-2 py-1 text-xs font-semibold rounded-full bg-green-100 dark:bg-green-900 text-green-800 dark:text-green-200">
             ${topic}
           </span>
         `
@@ -120,14 +120,14 @@ document.addEventListener("DOMContentLoaded", () => {
           <div class="flex items-center">
             <div class="flex-shrink-0 h-16 w-16">
               <img
-                class="h-16 w-16 rounded-full object-cover border-2 border-purple-500"
+                class="h-16 w-16 rounded-full object-cover border-2 border-green-500"
                 src="${influencer.avatar || "/placeholder.svg"}"
                 alt="${influencer.name}"
               />
             </div>
             <div class="ml-4">
               <h3 class="text-lg font-bold text-gray-900 dark:text-white">${influencer.name}</h3>
-              <p class="text-sm text-purple-600 dark:text-purple-400">${influencer.role || ""}</p>
+              <p class="text-sm text-green-600 dark:text-green-400">${influencer.role || ""}</p>
             </div>
           </div>
           <div class="mt-4">
@@ -163,7 +163,7 @@ document.addEventListener("DOMContentLoaded", () => {
     prevButton.className = `px-4 py-2 rounded-md font-medium transition-colors ${
       currentInfluencerPage === 1
         ? 'bg-gray-100 dark:bg-gray-700 text-gray-400 cursor-not-allowed'
-        : 'bg-purple-600 text-white hover:bg-purple-700'
+        : 'bg-green-600 text-white hover:bg-green-700'
     }`;
     prevButton.textContent = 'Anterior';
     prevButton.disabled = currentInfluencerPage === 1;
@@ -181,7 +181,7 @@ document.addEventListener("DOMContentLoaded", () => {
       const pageButton = document.createElement('button');
       pageButton.className = `px-4 py-2 rounded-md font-medium transition-colors ${
         i === currentInfluencerPage
-          ? 'bg-purple-600 text-white'
+          ? 'bg-green-600 text-white'
           : 'bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-gray-200 hover:bg-gray-300 dark:hover:bg-gray-600'
       }`;
       pageButton.textContent = i;
@@ -198,7 +198,7 @@ document.addEventListener("DOMContentLoaded", () => {
     nextButton.className = `px-4 py-2 rounded-md font-medium transition-colors ${
       currentInfluencerPage === totalPages
         ? 'bg-gray-100 dark:bg-gray-700 text-gray-400 cursor-not-allowed'
-        : 'bg-purple-600 text-white hover:bg-purple-700'
+        : 'bg-green-600 text-white hover:bg-green-700'
     }`;
     nextButton.textContent = 'Próximo';
     nextButton.disabled = currentInfluencerPage === totalPages;

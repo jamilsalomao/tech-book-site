@@ -27,7 +27,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const button = document.createElement("button")
     button.className = `px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 ${
       category === "Todos"
-        ? "bg-purple-600 text-white"
+        ? "bg-green-600 text-white"
         : "bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-gray-200 hover:bg-gray-300 dark:hover:bg-gray-600"
     }`
     button.textContent = category
@@ -44,7 +44,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const buttons = bookCategories.querySelectorAll("button")
     buttons.forEach((button) => {
       if (button.textContent === category) {
-        button.classList.add("bg-purple-600", "text-white")
+        button.classList.add("bg-green-600", "text-white")
         button.classList.remove(
           "bg-gray-200",
           "dark:bg-gray-700",
@@ -54,7 +54,7 @@ document.addEventListener("DOMContentLoaded", () => {
           "dark:hover:bg-gray-600",
         )
       } else {
-        button.classList.remove("bg-purple-600", "text-white")
+        button.classList.remove("bg-green-600", "text-white")
         button.classList.add(
           "bg-gray-200",
           "dark:bg-gray-700",
@@ -105,7 +105,7 @@ document.addEventListener("DOMContentLoaded", () => {
           <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end">
             <div class="p-4 text-white">
               <button
-                class="view-book-details px-4 py-2 bg-purple-600 rounded-md text-sm font-medium hover:bg-purple-700 transition-colors"
+                class="view-book-details px-4 py-2 bg-green-600 rounded-md text-sm font-medium hover:bg-green-700 transition-colors"
                 data-book-id="${book.id}"
               >
                 Ver detalhes
@@ -118,7 +118,7 @@ document.addEventListener("DOMContentLoaded", () => {
           <p class="text-sm text-gray-500 dark:text-gray-400">${book.author}</p>
           <div class="mt-2">
             ${book.category.map(category => `
-              <span class="inline-block px-2 py-1 text-xs font-semibold rounded-full bg-purple-100 dark:bg-purple-900 text-purple-800 dark:text-purple-200 mr-1">
+              <span class="inline-block px-2 py-1 text-xs font-semibold rounded-full bg-green-100 dark:bg-green-900 text-green-800 dark:text-green-200 mr-1">
                 ${category}
               </span>
             `).join("")}
@@ -156,7 +156,7 @@ document.addEventListener("DOMContentLoaded", () => {
     prevButton.className = `px-4 py-2 rounded-md font-medium transition-colors ${
       currentPage === 1
         ? 'bg-gray-100 dark:bg-gray-700 text-gray-400 cursor-not-allowed'
-        : 'bg-purple-600 text-white hover:bg-purple-700'
+        : 'bg-green-600 text-white hover:bg-green-700'
     }`;
     prevButton.textContent = 'Anterior';
     prevButton.disabled = currentPage === 1;
@@ -174,7 +174,7 @@ document.addEventListener("DOMContentLoaded", () => {
       const pageButton = document.createElement('button');
       pageButton.className = `px-4 py-2 rounded-md font-medium transition-colors ${
         i === currentPage
-          ? 'bg-purple-600 text-white'
+          ? 'bg-green-600 text-white'
           : 'bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-gray-200 hover:bg-gray-300 dark:hover:bg-gray-600'
       }`;
       pageButton.textContent = i;
@@ -191,7 +191,7 @@ document.addEventListener("DOMContentLoaded", () => {
     nextButton.className = `px-4 py-2 rounded-md font-medium transition-colors ${
       currentPage === totalPages
         ? 'bg-gray-100 dark:bg-gray-700 text-gray-400 cursor-not-allowed'
-        : 'bg-purple-600 text-white hover:bg-purple-700'
+        : 'bg-green-600 text-white hover:bg-green-700'
     }`;
     nextButton.textContent = 'Próximo';
     nextButton.disabled = currentPage === totalPages;
@@ -224,7 +224,7 @@ document.addEventListener("DOMContentLoaded", () => {
           <p class="text-gray-600 dark:text-gray-300 mt-1">${book.author}</p>
           <div class="mt-2">
             ${book.category.map(category => `
-              <span class="inline-block px-2 py-1 text-xs font-semibold rounded-full bg-purple-100 dark:bg-purple-900 text-purple-800 dark:text-purple-200 mr-1">
+              <span class="inline-block px-2 py-1 text-xs font-semibold rounded-full bg-green-100 dark:bg-green-900 text-green-800 dark:text-green-200 mr-1">
                 ${category}
               </span>
             `).join("")}
@@ -233,7 +233,7 @@ document.addEventListener("DOMContentLoaded", () => {
           <div class="mt-6">
             <a
               href=${book.link}
-              class="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-purple-600 hover:bg-purple-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-purple-500"
+              class="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-green-600 hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-500"
             >
               Comprar livro
             </a>
